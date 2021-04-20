@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  padding: 10px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+.logoTitle {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Cabin', sans-serif;
+  color: beige;
+  opacity: 0.9;
+}
+.container {
+  background-color: #31363c;
+  height: 100vh;
+}
+
+.searchCont {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.searchBox {
+  margin-top: 20px;
+  position: relative;
+  width: 40%;
+}
+
+.searchBox input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #2a99b7;
+  border-radius: 0.5rem;
+  background: none;
+  outline: none;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+.fa-search {
+  position: absolute;
+  top: 50%;
+  color: gray;
+  size: 293px;
+  transform: translateY(-50%);
+  right: 20px;
+  cursor: pointer;
+}
+.fa-search:hover {
+  color: #2a99b7;
+  transition: 500ms;
+}
+
+.contMeteo {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.meteo {
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+  width: 79vw;
+  background: linear-gradient(#046f94 9%, #65b7c6);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 25px;
+}
+
+.meteoDetail {
+  height: 54vh;
+  width: 50%;
+  display: flex;
+  margin: 20px 80px;
+  flex-direction: column;
+  justify-content: center;
+}
+.meteoCondition {
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.temp_min,
+.temp_max {
+  font-size: 1.6rem;
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  color: whitesmoke;
+  opacity: 0.9;
+}
+.temp_max {
+  width: 50px;
+  border-bottom: 2px solid white;
+  border-radius: 1px;
+}
+.tempCont {
+  display: flex;
+  flex-direction: column;
+}
+
+.temp {
+  font-size: 7rem;
+  font-family: 'Rubik', sans-serif;
+}
+.name {
+  font-size: 3rem;
+  font-family: 'Rubik', sans-serif;
+}
+.description {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Rubik', sans-serif;
+}
+
+.name,
+.temp,
+.description {
+  color: whitesmoke;
+}
+.date,
+.humidity {
+  color: whitesmoke;
+  opacity: 0.7;
+  font-family: sans-serif;
+}
+
+footer {
+  font-family: monospace;
+  opacity: 0.8;
+  text-align: center;
+  color: beige;
+  font-size: 1rem;
+  font-family: 'Cabin', sans-serif;
+}
+
+span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
