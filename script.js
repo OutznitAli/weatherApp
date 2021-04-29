@@ -10,6 +10,23 @@ let icon = document.querySelector('.icon')
 let pressure = document.querySelector('.pressure')
 let dayNow = document.querySelector('.day')
 
+function getdate() {
+  let d = new Date()
+  let day = d.getDay()
+
+  let weekday = Array(7)
+  weekday[0] = 'Sunday'
+  weekday[1] = 'Monday'
+  weekday[2] = 'Tuesday'
+  weekday[3] = 'Wednesday'
+  weekday[4] = 'Thursday'
+  weekday[5] = 'Friday'
+  weekday[6] = 'Saturday'
+
+  dayNow.textContent = weekday[day]
+
+  console.log(dayNow.textContent)
+}
 let getData = (city) => {
   fetch(
     'https://api.openweathermap.org/data/2.5/weather?q=' +
@@ -109,11 +126,13 @@ let getData = (city) => {
 
 window.addEventListener('load', () => {
   getData('Rabat')
+  getdate()
 })
 
 input.addEventListener('keypress', (e) => {
   if (e.keyCode == '13') {
     getData(input.value)
+    getdate()
   }
 })
 

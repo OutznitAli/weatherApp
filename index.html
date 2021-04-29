@@ -1,79 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    />
 
-    <title>Morocco Condition Météo</title>
-  </head>
-  <body>
-    <nav class="containerLogo">
-      <img class="logo" src="../icon_condition/logo.png" />
-    </nav>
-    <section class="sectionContainer">
-      <div class="container">
-        <div class="inputConatiner">
-          <div class="soubInput">
-            <input class="inputField" placeholder="Enter a city here..." />
-            <i class="fas fa-search"></i>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="../icon_condition/icon.png">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+  <title>Morocco Condition Météo</title>
+</head>
+
+<body>
+  <nav class="containerLogo">
+    <img class="logo" src="../icon_condition/logo.png" />
+  </nav>
+  <section class="sectionContainer">
+    <div class="container">
+      <div class="inputConatiner">
+        <div class="soubInput">
+          <input class="inputField" placeholder="Enter a city here..." />
+          <i class="fas fa-search"></i>
         </div>
-        <div class="locationContainer">
-          <div class="location">
-            <h3 class="name"></h3>
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
+      </div>
+      <div class="locationContainer">
+        <div class="location">
+          <h3 class="name"></h3>
+          <i class="fas fa-map-marker-alt"></i>
         </div>
-        <div class="containerWeather">
-          <div class="Meteo">
-            <button onclick="myFunction()">click</button>
-            <h2 class="day">monday</h2>
-            <h1 class="temp"></h1>
-            <p class="description"></p>
-          </div>
+      </div>
+      <div class="containerWeather">
+        <div class="Meteo">
+          <h2 class="day">monday</h2>
+          <h1 class="temp"></h1>
+          <p class="description"></p>
+        </div>
         <div class="detailContainer">
           <div class="containerMain">
             <div class="containerHumidity">
-            <img
-              class="humiIcon"
-              src="../icon_condition/humidity.png"
-              width="20px"
-            />
-            <h3 class="humidity"></h3>
+              <img class="humiIcon" src="../icon_condition/humidity.png" width="15px" />
+              <h3 class="humidity"></h3>
             </div>
             <div class="containerPressure">
-              <img  calss="pressureIcon" src="../icon_condition/pressure.png" width="20px">
+              <img calss="pressureIcon" src="../icon_condition/pressure.png" width="15px">
               <h3 class="pressure"></h3>
             </div>
             <div class="containerTempmin">
-               <img src="../icon_condition/temp_min.png" width="20px">
+              <img src="../icon_condition/temp_min.png" width="15px">
               <h3 class="temp_min"></h3>
             </div>
             <div class="containerTempmax">
-               <img src="../icon_condition/temp_max.png" width="20px">
-               <h3 class="temp_max"></h3>
+              <img src="../icon_condition/temp_max.png" width="15px">
+              <h3 class="temp_max"></h3>
             </div>
           </div>
           <div class="containerIcon">
-            <img class="icon" src="" width="100px" />
+            <img class="icon" src="" width="120px" />
           </div>
         </div>
       </div>
-    </section>
+  </section>
 
-    <script src="script.js"></script>
-    <script>
-      function myFunction() {
-  var d = new Date();
-  var n = d.getDay()
-  document.getElementsByClassName("day").innerHTML = n;
-}
-    </script>
-  </body>
+  <script src="script.js"></script>
+
+</body>
+
 </html>
