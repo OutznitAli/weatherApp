@@ -4,9 +4,11 @@ let tempreture = document.querySelector('.temp')
 let name = document.querySelector('.name')
 let description = document.querySelector('.description')
 let humidity = document.querySelector('.humidity')
-// let tempMin = document.querySelector('.temp_min')
-// let tempMax = document.querySelector('.temp_max')
+let tempMin = document.querySelector('.temp_min')
+let tempMax = document.querySelector('.temp_max')
 let icon = document.querySelector('.icon')
+let pressure = document.querySelector('.pressure')
+let dayNow = document.querySelector('.day')
 
 let getData = (city) => {
   fetch(
@@ -19,7 +21,7 @@ let getData = (city) => {
     })
 
     .then(function (json) {
-      tempreture.textContent = Math.round(json.main.temp) + 'º'
+      tempreture.textContent = Math.ceil(json.main.temp) + 'º'
       name.textContent = json.name
       description.textContent = json.weather[0].description
       switch (json.weather[0].icon) {
@@ -99,14 +101,13 @@ let getData = (city) => {
           'error'
       }
       humidity.textContent = json.main.humidity + '%'
-      // tempMax.textContent = Math.round(json.main.temp_max) + 'º'
-      // tempMin.textContent = Math.round(json.main.temp_min) + 'º'
+      tempMax.textContent = Math.ceil(json.main.temp_max) + 'º'
+      tempMin.textContent = Math.round(json.main.temp_min) + 'º'
+      pressure.textContent = json.main.pressure
     })
 }
 
 window.addEventListener('load', () => {
-  // document.querySelector('.date').innerHTML = Date()
-
   getData('Rabat')
 })
 
@@ -115,10 +116,6 @@ input.addEventListener('keypress', (e) => {
     getData(input.value)
   }
 })
-
-// button.addEventListener('click', function () {
-//   document.querySelector('.date').innerHTML = Date()
-// })
 
 button.addEventListener('click', () => {
   getData(input.value)

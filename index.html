@@ -14,40 +14,66 @@
   </head>
   <body>
     <nav class="containerLogo">
-        <img class="logo" src="../icon_condition/logo.png"> 
+      <img class="logo" src="../icon_condition/logo.png" />
     </nav>
     <section class="sectionContainer">
-    <div class="container">
-      <div class="inputConatiner">
-        <div class="soubInput">
-          <input class="inputField" placeholder="Enter a city here..." />
-          <i class="fas fa-search"></i>
+      <div class="container">
+        <div class="inputConatiner">
+          <div class="soubInput">
+            <input class="inputField" placeholder="Enter a city here..." />
+            <i class="fas fa-search"></i>
+          </div>
         </div>
-      </div>
-      <div class="locationContainer">
+        <div class="locationContainer">
           <div class="location">
             <h3 class="name"></h3>
             <i class="fas fa-map-marker-alt"></i>
           </div>
-    </div>
-    <div class="containerWeather">
-      <div class="Meteo">
-        <h1 class="temp"></h1>
-        <p class="description"></p>
-      </div>
-
-      <div class="containerIcon">
-        <img  class="icon" src="" width="100px">
-        <div class="containerHumidity">
-          <img class="humiIcon" src="../icon_condition/humidity.png" width="20px">
-          <h3 class="humidity"></h3>
+        </div>
+        <div class="containerWeather">
+          <div class="Meteo">
+            <button onclick="myFunction()">click</button>
+            <h2 class="day">monday</h2>
+            <h1 class="temp"></h1>
+            <p class="description"></p>
+          </div>
+        <div class="detailContainer">
+          <div class="containerMain">
+            <div class="containerHumidity">
+            <img
+              class="humiIcon"
+              src="../icon_condition/humidity.png"
+              width="20px"
+            />
+            <h3 class="humidity"></h3>
+            </div>
+            <div class="containerPressure">
+              <img  calss="pressureIcon" src="../icon_condition/pressure.png" width="20px">
+              <h3 class="pressure"></h3>
+            </div>
+            <div class="containerTempmin">
+               <img src="../icon_condition/temp_min.png" width="20px">
+              <h3 class="temp_min"></h3>
+            </div>
+            <div class="containerTempmax">
+               <img src="../icon_condition/temp_max.png" width="20px">
+               <h3 class="temp_max"></h3>
+            </div>
+          </div>
+          <div class="containerIcon">
+            <img class="icon" src="" width="100px" />
+          </div>
         </div>
       </div>
-      
-      
-    </div>
     </section>
 
     <script src="script.js"></script>
+    <script>
+      function myFunction() {
+  var d = new Date();
+  var n = d.getDay()
+  document.getElementsByClassName("day").innerHTML = n;
+}
+    </script>
   </body>
 </html>
