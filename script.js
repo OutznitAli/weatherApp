@@ -24,8 +24,6 @@ function getdate() {
   weekday[6] = 'Saturday'
 
   dayNow.textContent = weekday[day]
-
-  console.log(dayNow.textContent)
 }
 let getData = (city) => {
   fetch(
@@ -38,8 +36,8 @@ let getData = (city) => {
     })
 
     .then(function (json) {
-      tempreture.textContent = Math.ceil(json.main.temp) + 'º'
       name.textContent = json.name
+      tempreture.textContent = Math.ceil(json.main.temp) + 'º'
       description.textContent = json.weather[0].description
       switch (json.weather[0].icon) {
         case '01n':
@@ -132,7 +130,6 @@ window.addEventListener('load', () => {
 input.addEventListener('keypress', (e) => {
   if (e.keyCode == '13') {
     getData(input.value)
-    getdate()
   }
 })
 
